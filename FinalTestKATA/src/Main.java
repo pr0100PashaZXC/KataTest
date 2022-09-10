@@ -5,14 +5,7 @@ public class Main {
 
     public static void main(String [] args){
 
-
-        int resultNumA = 0;
-        int resultNumB = 0;
-        int result = 0;
-        String answer = "0";
         String input = "";
-        boolean isRomanNum = false;
-
 
         Scanner inputStr = new Scanner(System.in);
         System.out.println("Введите выражение:");
@@ -164,7 +157,7 @@ public class Main {
                 resultNumB = romanToInt(inpData[2]);
             }
             else{
-                throw new RuntimeException("неправильно введены операнды. одновеременно могут использоваться целые, только арабские или только римские цифры");
+                throw new RuntimeException("неправильно введены операнды. одновеременно могут использоваться целые, только арабские или только римские цифры через пробел");
             }
         }
 
