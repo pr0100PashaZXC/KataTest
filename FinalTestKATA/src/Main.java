@@ -190,7 +190,7 @@ public class Main {
             default: throw new RuntimeException("Оперция не распознана. Повторите снова(Вы можете использовать только +, -, *, /).");
         }
         if (result <= 0 && isRomanNum){
-            throw new RuntimeException(" Результат вычисления не может быть меньше нуля, если вы используете римские цифры");
+            throw new RuntimeException(" Результат вычисления не может быть меньше единицы, если вы используете римские цифры");
         }
         if(isRomanNum) answer = IntToRom(result);
         else answer = Integer.toString(result);
