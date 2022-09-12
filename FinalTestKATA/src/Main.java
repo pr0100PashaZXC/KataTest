@@ -134,6 +134,10 @@ public class Main {
 
         }
 
+        if(inpData.length > 3){
+            throw new RuntimeException("Введено более двух операндов.");
+        }
+
 
         try {
             resultNumA = Integer.parseInt(inpData[0]);
@@ -165,7 +169,7 @@ public class Main {
         //System.out.println(resultNumB);
 
 
-        if(((resultNumA > 10 || resultNumB > 10) &&(resultNumA < 1 || resultNumB < 1)) && isRomanNum){
+        if(resultNumA > 10 || resultNumA < 1 || resultNumB > 10 || resultNumB < 1){
             throw new RuntimeException("Введеные вами числа больше 10 или меньше 1. Попробуйте снова");
         }
 
@@ -185,7 +189,7 @@ public class Main {
                 break;
             default: throw new RuntimeException("Оперция не распознана. Повторите снова(Вы можете использовать только +, -, *, /).");
         }
-        if (result < 0 && isRomanNum){
+        if (result <= 0 && isRomanNum){
             throw new RuntimeException(" Результат вычисления не может быть меньше нуля, если вы используете римские цифры");
         }
         if(isRomanNum) answer = IntToRom(result);
@@ -193,7 +197,4 @@ public class Main {
 
         return answer;
     }
-
-
-
 }
